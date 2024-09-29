@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Conversations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Grocery Conversations</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vocabulary.html">Vocabulary</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="conversation">
+            <p>French: <strong>Bonjour, je voudrais des pommes, s'il vous plaît.</strong></p>
+            <p>English: Hello, I would like some apples, please.</p>
+            <button onclick="playAudio('audio/bonjour.mp3')">Play Pronunciation</button>
+        </div>
+
+        <div class="conversation">
+            <p>French: <strong>Combien ça coûte?</strong></p>
+            <p>English: How much does it cost?</p>            
+            <button onclick="playAudio('audio/combien.mp3')">Play Pronunciation</button>
+        </div>
+        <!-- Add more conversations here -->
+    </section>
+
+    <audio id="audio-player"></audio>
+
+    <script>
+        function playAudio(file) {
+            var audio = document.getElementById("audio-player");
+            audio.src = file;
+            audio.play();
+        }
+    </script>
+</body>
+</html>
+

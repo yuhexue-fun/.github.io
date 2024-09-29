@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits Vocabulary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fruits Vocabulary</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="conversation.html">Conversations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="fruit-grid">
+            <div class="fruit-item">
+                <img src="images/apple.jpg" alt="Apple">
+                <p>French: <strong>Pomme</strong></p>
+                <p>English: Apple</p>
+                <button onclick="playAudio('audio/apple.mp3')">Play Pronunciation</button>
+            </div>
+
+            <div class="fruit-item">
+                <img src="images/banana.jpg" alt="Banana">
+                <p>French: <strong>Banane</strong></p>
+                <p>English: Banana</p>
+                <button onclick="playAudio('audio/banana.mp3')">Play Pronunciation</button>
+            </div>
+            <!-- Add more fruits here -->
+        </div>
+    </section>
+
+    <audio id="audio-player"></audio>
+
+    <script>
+        function playAudio(file) {
+            var audio = document.getElementById("audio-player");
+            audio.src = file;
+            audio.play();
+        }
+    </script>
+</body>
+</html>
+
+
